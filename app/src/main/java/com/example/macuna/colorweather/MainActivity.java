@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -13,11 +14,12 @@ import butterknife.OnClick;
 
 public class MainActivity extends Activity {
     public static final String TAG = MainActivity.class.getSimpleName();
-   // private TextView dailyWeatherTextView;
-   // private TextView hourlyWeatherTextView;
-   // private TextView minutelyWeatherTextView;
 
-    //@BindView(R.id.dayliWeatherTextView) TextView dailyWeatherTextView;
+    @BindView(R.id.iconImageView) ImageView iconImageView;
+    @BindView(R.id.descriptionTextView) TextView descriptionTextView;
+    @BindView(R.id.tempTextView) TextView tempTextView;
+    @BindView(R.id.higestTempTextView) TextView higestTempTextView;
+    @BindView(R.id.lowestTempTextView) TextView lowestTempTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        CurrentWeather currentWeather = new CurrentWeather();
+         //iconImageView;
+        descriptionTextView.setText("Sunny Day");
+        tempTextView.setText("19");
+        higestTempTextView.setText("H:25");
+        lowestTempTextView.setText("L:10");
     }
 
 
@@ -35,16 +43,6 @@ public class MainActivity extends Activity {
         startActivity(dailyActivityIntent);
     }
 
-    @OnClick(R.id.hourlyWeatherTextView)
-    public void hourlyWeatherClick(){
-        Intent hourlyActivityIntent = new Intent(MainActivity.this, HourlyWeatherctivity.class);
-        startActivity(hourlyActivityIntent);
-    }
 
-    @OnClick(R.id.minutelyWeatherTextView)
-    public void minutelyWeatherClick(){
-        Intent minutelyActivityIntent = new Intent(MainActivity.this, MinuteliWeatherActivity.class);
-        startActivity(minutelyActivityIntent);
-    }
 
 }
