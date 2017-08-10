@@ -4,24 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.macuna.colorweather.DayliWeatherActivity"
+    tools:context="com.example.macuna.colorweather.MinuteliWeatherActivity"
     android:background="#00D2FF">
 
     <TextView
-        android:id="@+id/dayliWeatherTitleTextView"
+        android:id="@+id/minutely_weather_title"
         style="@style/mainFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="@string/dayli_forecast"
+        android:text="@string/minutelyWeatherTextView"
         android:textStyle="bold" />
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
+        style="@style/mainFont"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/dayliWeatherTitleTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_below="@+id/minutely_weather_title"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

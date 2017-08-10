@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Comafi AIDM</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="dayli_forecast">Dayli Forecast</string>
+    <string name="minutely_button_text">MINUTELY</string>
+    <string name="hourly_button_text">HOURLY</string>
+    <string name="dayli_button_text">DAYLI</string>
+    <string name="minutelyWeatherTextView">Minutely Forecast</string>
 </resources>
