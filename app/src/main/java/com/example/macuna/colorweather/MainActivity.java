@@ -2,12 +2,14 @@ package com.example.macuna.colorweather;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindDrawable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,6 +23,8 @@ public class MainActivity extends Activity {
     @BindView(R.id.higestTempTextView) TextView higestTempTextView;
     @BindView(R.id.lowestTempTextView) TextView lowestTempTextView;
 
+    @BindDrawable(R.drawable.clear_night) Drawable clearNight;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +32,7 @@ public class MainActivity extends Activity {
         ButterKnife.bind(this);
 
         CurrentWeather currentWeather = new CurrentWeather();
-         //iconImageView;
+         iconImageView.setImageDrawable(clearNight);
         descriptionTextView.setText("Sunny Day");
         tempTextView.setText("19");
         higestTempTextView.setText("H:25");
